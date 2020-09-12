@@ -1,0 +1,48 @@
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+
+import { StackOrder, Heights, Color, Widths, Sizes } from '../../styles/constants';
+
+export const Container = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: ${StackOrder.header};
+  width: 100%;
+  background-color: ${Color.darker};
+  border-bottom: 1px solid ${Color.border};
+`;
+
+export const SpaceContainer = styled.div`
+  margin: 0 auto;
+  max-width: ${Widths.lg};
+  padding: 0 ${Sizes.sm};
+`;
+
+export const Content = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  height: ${Heights.headerLg};
+`;
+
+export const Brand = styled.div`
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin-left: ${Sizes.sm};    
+  }
+`;
+
+export const Heading = styled.h1`
+  color: ${Color.green};
+  font-family: 'Fira Code', sans-serif;
+  font-size: 1.7rem;
+`;
+
+export const Code = styled.span`
+  color: ${Color.pink};
+`;
